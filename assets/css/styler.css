@@ -1,69 +1,204 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,600;1,600&display=swap');
-
+/*GENERAL*/
 
 *{
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-body{ 
+:root{
+    --pink: #ef449b;
+    --voiletred: #271620;
+    --whitesmoke: #f5ecf0;
+    --gold: #c7b215;
+    --peach: #f1ccd2;
+    --pear: #f09bcc;
+   }
+   
+
+body{
+    margin: 0;
+    padding:0;
+    font-family: 'Fondamento',cursive, 'Open-sans',sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+img{
+        max-width: 100%;
+        height: auto;   
+}
+
+.register input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width:250px;
+}
+.btn-rounded{
+      height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--whitesmoke);
+    background: var(--gold);
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/*nav and header*/
+header{ 
+    background:var(--voiletred);
+    color:var(--whitesmoke);
+    padding-top:30px;
+    min-height: 70px;
+    border-bottom: 5px solid var(--gold);
+}
+
+header a{
+    color:var(--whitesmoke);
+    font-size: 16px;
+    text-decoration: none;
+}
+ul{
     margin: 0;
     padding: 0;
-    text-align: center;
-    background: linear-gradient(rgba(0, 0, 60, 0.1),rgba(0, 0, 60, 0.1));
-    background-image: url("../images/vladislav-muslakov-CwIU33KGToc-unsplash.jpg");
-    background-color: #0d0e0d;
-    background-size: cover;
-    background-position: center;
-    font-family: 'Montserrat+Alternates';
+    list-style: none;
 }
 
-.contact{
-    text-shadow: sienna;
-    text-transform: capitalize;
-    transition: all 10s ease-in-out;
-    color: rgb(29, 172, 216);
-    margin-top: 100px;
+header li{
+    float: left;
+    padding: 0px 20px 20px 20px;
 }
 
-form, body{
-    margin-top: 50px;
-    transition: all 6s ease-in-out;
+header #Logo{
+    float: left;
 }
 
-h1{
-    font-size: 80px;
+header #Logo h1{
+    margin: 0;
 }
 
-.form-control{
-    width: 400px;
-    background: transparent;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid gray;
-    color: #fff;
-    margin-bottom:16px;
-    font-size: 16px;
+header nav{
+    float: right;
+    margin-top: 10px;
 }
 
-form .submit{
-    width: 300px;
-    background-color: steelblue;
-    margin-top: 15px;
-    font-size: medium ;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    height: 50px;
+ h1 .pink, header .current a{
+    color:var(--pink) !important;
+    font-weight: bold;
 }
 
-form .submit:hover{
-    background-color: palevioletred;
+header a:hover, .disabled:hover{
+    color:var(--gold);
+    font-weight: bold;
     cursor: pointer;
 }
 
-p {
-    font-size:2rem;
-    color: palevioletred;
+/* First Section after header "vision"*/
+#vision{
+    background: var(--peach);
+    border-bottom: 5px solid var(--gold);
 }
-.animate__animated.animate__bounce {
-    --animate-duration: 6s;
+
+.centered h1{
+    text-align: center;
+    font-size: 2em;
+    line-height: 1px;
+    letter-spacing: 10px;
 }
+.centered p{
+    text-align: center;
+    
+}
+
+#soonbox{
+    float: right;
+    margin-top: 10px;
+    margin-left: 3px;
+}
+
+#visionbox{
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+}
+
+#vision h1{
+    margin-top: 35px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+#vision p{
+    line-height: 20px;
+}
+
+
+/* second section "performance"*/
+#performance{
+    background: var(--whitesmoke);
+    border-bottom: 5px solid var(--gold);
+    
+}
+
+#rightbox{
+    float: right;
+    margin-top: 15px;
+    width: 65%;
+    left: 5px;
+}
+
+#centeredbox{
+    float: left;
+    }
+
+.boxes{
+    border-bottom: 5px solid var(--gold);
+}
+
+.boxes .box{
+    float: left;
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+}
+
+#middle h1{
+    font-size: 3rem;;
+    
+}
+
+/*Meet Our Team*/
+
+#team{
+    background: var(--whitesmoke);
+}
+
+/* Almost Done "app*/
+#app{
+    background: var(--pear);
+}
+
+#foot{
+    background: var(--voiletred);
+    padding: 20px;
+    text-align: center;
+    color:var(--whitesmoke);
+   
+}
+
+[aos="fade"] {
+    opacity: 0;
+    transition-property: opacity;
+  }
+  
+  [aos="fade"].aos-animate {
+    opacity: 1;
+  }
+  

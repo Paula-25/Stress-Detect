@@ -1,37 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Responsive Website and Contact-form">
 
-<!--My StyleSheet-->
-<link rel="stylesheet" href="assets/css/styler.css" type="text/css">
-<link rel="stylesheet" href="assets/css/animate.min.css" type="text/css">
-<link rel="stylesheet" href="assets/css/fontawesome.min.css" type="text/css">
-    <title>Stress-Detect</title>
+    <!--My StyleSheet-->
+    <link rel="stylesheet" href="assets/css/styler.css" type="text/css">
+
+    <!--My Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <!--Link To My-->
+    <link href="/assets/css/animate.min.css" rel="stylesheet">
+    <link href="/assets/css/fontawesome.min.css" rel="stylesheet">
+
+
+    <title>Stress-Detect | Coming Soon</title>
 </head>
+
 <body>
-        <div class="adjust contact">       
-            <h1>Stress-Detect</h1>
-         <h2>Capture your face and lets tell you how much rest you need</h2>
-        <p class="animate__animated animate__bounce"><b>COMING SOON!</b></p>
-    </div>
+    <header>
+        <div class="container banner">
+            <div id="Logo">
+                <h1><span class="pink">Stress-Detect</span>APP</span>
+                </h1>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li class="current">
+                        <a href="#performance">Features</a>
+                    </li>
+                    <li>
+                        <a href="#middle">Pricing</a>
+                    </li>
+                    <li class="disabled">
+                        <a href="#">
+                            <button class="btn-rounded" type="submit">GET EARLY ACCESS
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="vision">
+        <div class="container">
+            <div id="visionbox">
+                <h1 id="space">COMING SOON !</h1>
+                <p>
+                    We are revolutionizing how you measure critical health
+                    parameters to help safeguard your help.<br>
+                    You are now in control of measuring your stress levels,
+                    adrenaline shots and even your work limit
+                    all by yourself with your mobile phone.<br> Great News!!<br>
+                    We are granting early access to be among the first to
+                    be notified when this app is released!
+                <form class="register">
+                    <input type="email" placeholder="Enter Email Address" value="" name="email">
+                    <button type="submit" class="btn-rounded">Get an Invite</button>
+                </form>
+                </p>
+            </div>
+            <div id="soonbox">
+                <img id="soon" src="assets/images/iPhone XS (Front) (Mockuuups Studio).png">
+            </div>
+        </div>
+    </section>
+    <section id="performance">
+        <div class="container">
+            <div class="centered">
+                <h1>HOW IT WORKS</h1>
+            </div>
+            <div id="centeredbox">
+                <img src="assets/images/iPhone XS (Front) (Mockuuups Studio) (1).png">
+            </div>
+            <div id="rightbox">
+                <h1>FACIAL RECOGNITION</h1>
+                <p> Our team of software engineers
+                    has developed a technology capable of identifying
+                    a person just from a digital capture.<br>
+                    This helps keep record of your stress data.
+                    It captures your skin texture, eye and facial expression
+                    then offers you the best amount of rest you need.
+                    The software uses biometrics to map the
+                    geometry of the face. It notes more than sixty
+                    facial landmarks, measuring and then calculating
+                    a number to represent the combined relative distances.
+                    The result is called a ‘faceprint.’ Cross-referencing
+                    the result of this mathematical formula
+                    with known databases quickly confirms identity.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="boxes">
+        <div class="container">
+            <div class="centered">
+                <h1>FEATURES</h1>
+                <p>We have carefully selected the
+                    functionalities of the app to perfectly
+                    fit the usage it was made for</p>
+            </div>
+            <div class="box">
+                <img src="assets/images/iPhone XS (Front) (Mockuuups Studio) (2).png">
+                <article>
+                    <h3>RECOMMENDS ACCURATE SLEEP HOURS</h3>
+                </article>
+            </div>
 
-    <div class="adjust contact-form">
-        <form id="contact-form" method="POST" action="register.php">
-            <input type="email" name="user_email" placeholder="Your Email" class="form-control" required>
-            <br><br>
-            <input type="submit" class="form-control submit" value="REGISTER">
-        </form>
-    </div>
+            <div class="box" id="middle">
+                <h1>We Will Help You Know Your Limit</h1>
+                <img src="assets/images/iPhone XS (Front) (Mockuuups Studio) (4).png">
+                <h3>DETERMINES YOUR REST THERAPY <span class="pink">BASED ON YOUR PERSONAL DATA</span> </h3>
+            </div>
+            <div class="box">
+                <img src="assets/images/iPhone XS (Front) (Mockuuups Studio) (3).png">
+                <h3>HELPS YOU CALCULATES BODY LEVELS </h3>
 
-    <div class="showcase-top" >
-        <img src="assets/images/untitled-project (4).png"><hr>
-        <img src="assets/images/untitled-project@2x (14).png">
-    </div>
-
-
- 
-    
+            </div>
+        </div>
+    </section>
+    <section class="boxes" id="team">
+        <div class="container">
+            <div class="centered">
+                <h1>THE TEAM</h1>
+                <p>These are the individuals behind the focus of this app</p>
+            </div>
+            <div class="box">
+                <img src="assets/images/Ellipse 34.png">
+                <h4>Paul Amusan</h4>
+                <p>Head of Design</p>
+            </div>
+            <div class="box">
+                <img src="assets/images/Ellipse 35.png">
+                <h4>Paula Ulor</h4>
+                <p>Head of Engineering</p>
+            </div>
+            <div class="box">
+                <img src="assets/images/Ellipse 36.png">
+                <h4>Paula Ulor</h4>
+                <p>Head of Psychology</p>
+            </div>
+        </div>
+    </section>
+    <section class="boxes" id="app">
+        <div class="container">
+            <div class="box">
+                <img src="assets/images/iPhone XS (Front) (Mockuuups Studio) (5).png">
+            </div>
+            <div class="box" id="middle">
+                <h1>Know Your Stress Levels In A Single Capture</h1>
+                <p>Track your stress levels
+                    and work limit with just a scan
+                </p>
+                <form class="register">
+                    <input type="email" placeholder="Enter Email Address" value="" name="email">
+                    <button type="submit" class="btn-rounded">Get an Invite</button>
+                </form>
+            </div>
+            <div class="box">
+                <img src="assets/images/iPhone XS (Front) (Mockuuups Studio) (6).png">
+            </div>
+        </div>
+    </section>
+    <footer id="foot">
+        <div class="container">
+            Copyright &copy; 2020 All rights reserved | Paul Studios
+        </div>
+    </footer>
 </body>
+
 </html>
