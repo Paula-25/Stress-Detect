@@ -18,17 +18,100 @@
 body{
     margin: 0;
     padding:0;
+    background-image: linear-gradient(45deg, #181818, var(--voiletred), palevioletred, indigo, violet)!important;
     font-family: 'Fondamento',cursive, 'Open-sans',sans-serif;
     font-size: 15px;
     line-height: 1.5;
+    color: white;
+    background-size: 400%;
+    animation: bg-animation 14s infinite alternate;
+}
+
+@keyframes bg-animation{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
 }
 
 .container{
     width: 80%;
     margin: auto;
     overflow: hidden;
+    transition: all 20s ease-in-out;
+}
+.floatbox div{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(182, 172, 177, 0.5);
+    border: 2px solid rgb(182, 172, 177);
+    border-radius: 10px;
 }
 
+.floatbox div:nth-child(1){
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+.floatbox div:nth-child(2){
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+.floatbox div:nth-child(3){
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+.floatbox div:nth-child(4){
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+.floatbox div:nth-child(5){
+    top: 67%;
+    left: 10%;
+    animation: animate 10s linear infinite;
+}
+.floatbox div:nth-child(6){
+    top: 8%;
+    left: 7%;
+    animation: animate 6s linear infinite;
+}
+.floatbox div:nth-child(7){
+    top: 30%;
+    left: 50%;
+    animation: animate 12s linear infinite;
+}
+.floatbox div:nth-child(8){
+    bottom: 32%;
+    left: 20%;
+    animation: animate 16s linear infinite;
+}
+.floatbox div:nth-child(9){
+    bottom: 45%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+.floatbox div:nth-child(10){
+    bottom: 23%;
+    left: 70%;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1
+    }
+    80%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
 
 img{
         max-width: 100%;
@@ -41,24 +124,34 @@ img{
     width:250px;
 }
 .btn-rounded{
-      height: 30px;
+    height: 40px;
     padding-left: 20px;
     padding-right: 20px;
-    color: var(--whitesmoke);
-    background: var(--gold);
+    background-color: var(--gold);
+    color: white;
     border: none;
-    border-radius: 20px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
+}
+.btn-rounded:hover{
+    color: red;
+}
+
+.form-control{
+    width: 400px;
+    padding: 10px 10px;
+    border: 2px solid var(--gold);
+    outline: none;
+    background: transparent;
 }
 
 /*nav and header*/
 header{ 
-    background:var(--voiletred);
+    /* background:var(--voiletred); */
     color:var(--whitesmoke);
     padding-top:30px;
     min-height: 70px;
-    border-bottom: 5px solid var(--gold);
+    /* border-bottom: 5px solid var(--gold); */
 }
 
 header a{
@@ -102,16 +195,14 @@ header a:hover, .disabled:hover{
 }
 
 /* First Section after header "vision"*/
-#vision{
-    background: var(--peach);
-    border-bottom: 5px solid var(--gold);
-}
 
 .centered h1{
+    margin-top: 10%;
     text-align: center;
     font-size: 2em;
     line-height: 1px;
     letter-spacing: 10px;
+    color: var(--pear);
 }
 .centered p{
     text-align: center;
@@ -141,11 +232,11 @@ header a:hover, .disabled:hover{
 
 
 /* second section "performance"*/
-#performance{
-    background: var(--whitesmoke);
+/*  #performance{
+     background: var(--whitesmoke); 
     border-bottom: 5px solid var(--gold);
     
-}
+} */
 
 #rightbox{
     float: right;
@@ -158,15 +249,16 @@ header a:hover, .disabled:hover{
     float: left;
     }
 
-.boxes{
+/* .boxes{
     border-bottom: 5px solid var(--gold);
-}
+} */
 
 .boxes .box{
     float: left;
     width: 30%;
     text-align: center;
     padding: 20px;
+    transition: all ease-in-out;
 }
 
 #middle h1{
@@ -176,29 +268,42 @@ header a:hover, .disabled:hover{
 
 /*Meet Our Team*/
 
-#team{
-    background: var(--whitesmoke);
-}
+/* #team{
+    /* background: var(--whitesmoke); */
+
 
 /* Almost Done "app*/
-#app{
-    background: var(--pear);
-}
+/* #app{ */
+    /* background: var(--pear);
+} */ 
 
-#foot{
-    background: var(--voiletred);
-    padding: 20px;
+footer .foot{
+    margin-top: 10px;
     text-align: center;
-    color:var(--whitesmoke);
-   
+    color:var(--whitesmoke); 
 }
-
-[aos="fade"] {
-    opacity: 0;
-    transition-property: opacity;
+  @media(max-width: 768px){
+      header #Logo,
+      header nav,
+      header nav li, #soonbox, 
+      #rightbox, #visionbox, #centeredbox,
+        .boxes,.box
+      { 
+        float: none;
+        text-align: center;
+        width: 100%;
+      }
+      img{
+          width: 90px;
+      }
+      .box{
+          float: none;
+          display: inline;
+      }
+      .form-control,.btn-rounded{
+          width: 100%
+      }
+      .centered h1, #middle h1, #app h1 {
+          font-size: 14px;
+      }
   }
-  
-  [aos="fade"].aos-animate {
-    opacity: 1;
-  }
-  

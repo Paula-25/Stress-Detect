@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Responsive Website and Contact-form">
+    <meta name="keywords" content="Responsive Website and Contact-form">
+    <meta name="author" content="Paula Ulor">
 
     <!--My StyleSheet-->
     <link rel="stylesheet" href="assets/css/styler.css" type="text/css">
@@ -13,10 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&family=Open+Sans&display=swap"
         rel="stylesheet">
 
-    <!--Link To My-->
+    <!--Link To Animate.Css-->
     <link href="/assets/css/animate.min.css" rel="stylesheet">
-    <link href="/assets/css/fontawesome.min.css" rel="stylesheet">
-
 
     <title>Stress-Detect | Coming Soon</title>
 </head>
@@ -25,7 +24,7 @@
     <header>
         <div class="container banner">
             <div id="Logo">
-                <h1><span class="pink">Stress-Detect</span>APP</span>
+                <h1><span class="pink">Stress-Detect</span>APP
                 </h1>
             </div>
             <nav id="navbar">
@@ -49,7 +48,7 @@
     <section id="vision">
         <div class="container">
             <div id="visionbox">
-                <h1 id="space">COMING SOON !</h1>
+                <h1 id="space" class="animate__animated animate__slideInLeft">COMING SOON !</h1>
                 <p>
                     We are revolutionizing how you measure critical health
                     parameters to help safeguard your help.<br>
@@ -58,10 +57,12 @@
                     all by yourself with your mobile phone.<br> Great News!!<br>
                     We are granting early access to be among the first to
                     be notified when this app is released!
-                <form class="register">
-                    <input type="email" placeholder="Enter Email Address" value="" name="email">
-                    <button type="submit" class="btn-rounded">Get an Invite</button>
-                </form>
+                    <div class="adjust contact-form">
+                        <form id="contact-form" method="POST" action="register.php">
+                            <input type="email" name="user_email" placeholder="Your Email" class="form-control" required>
+                            <input type="submit" class="submit btn-rounded" value="REGISTER">
+                        </form>
+                    </div>
                 </p>
             </div>
             <div id="soonbox">
@@ -89,9 +90,7 @@
                     geometry of the face. It notes more than sixty
                     facial landmarks, measuring and then calculating
                     a number to represent the combined relative distances.
-                    The result is called a ‘faceprint.’ Cross-referencing
-                    the result of this mathematical formula
-                    with known databases quickly confirms identity.
+                    
                 </p>
             </div>
         </div>
@@ -118,34 +117,25 @@
             </div>
             <div class="box">
                 <img src="assets/images/iPhone XS (Front) (Mockuuups Studio) (3).png">
-                <h3>HELPS YOU CALCULATES BODY LEVELS </h3>
+                <h3>HELPS YOU CALCULATE BODY LEVELS </h3>
 
             </div>
         </div>
     </section>
-    <section class="boxes" id="team">
-        <div class="container">
-            <div class="centered">
-                <h1>THE TEAM</h1>
-                <p>These are the individuals behind the focus of this app</p>
-            </div>
-            <div class="box">
-                <img src="assets/images/Ellipse 34.png">
-                <h4>Paul Amusan</h4>
-                <p>Head of Design</p>
-            </div>
-            <div class="box">
-                <img src="assets/images/Ellipse 35.png">
-                <h4>Paula Ulor</h4>
-                <p>Head of Engineering</p>
-            </div>
-            <div class="box">
-                <img src="assets/images/Ellipse 36.png">
-                <h4>Paula Ulor</h4>
-                <p>Head of Psychology</p>
-            </div>
+    <div class="container">
+        <div class="floatbox">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    </section>
+    </div>
     <section class="boxes" id="app">
         <div class="container">
             <div class="box">
@@ -154,23 +144,19 @@
             <div class="box" id="middle">
                 <h1>Know Your Stress Levels In A Single Capture</h1>
                 <p>Track your stress levels
-                    and work limit with just a scan
+                    and work limit with a single scan
                 </p>
-                <form class="register">
-                    <input type="email" placeholder="Enter Email Address" value="" name="email">
-                    <button type="submit" class="btn-rounded">Get an Invite</button>
-                </form>
             </div>
             <div class="box">
                 <img src="assets/images/iPhone XS (Front) (Mockuuups Studio) (6).png">
             </div>
         </div>
     </section>
-    <footer id="foot">
-        <div class="container">
-            Copyright &copy; 2020 All rights reserved | Paul Studios
-        </div>
+    <footer class="foot container">
+                    Copyright &copy; 2020 All rights reserved | Paul Studios
+        
     </footer>
+    
 </body>
 
 </html>
