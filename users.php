@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="assets/css/styler.css" type="text/css">
 
 <?php
-$email = $_POST['user'];
+$user = $_POST['email'];
 
 //checking connection
 $connection= 
@@ -13,7 +13,7 @@ mysqli_connect("x40p5pp7n9rowyv6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "rd5
 
 //execute sql query
 $result=
-mysqli_query($connection, "insert into register values('$email')");
+mysqli_query($connection, "insert into users values('$user')");
 
 //check query execution
 if (!$result)
