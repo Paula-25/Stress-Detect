@@ -5,7 +5,7 @@
 $email = $_POST['user'];
 
 //checking connection
-$stress-detect= 
+$connection= 
 mysqli_connect("x40p5pp7n9rowyv6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "rd5q6ogkv51a0vqy", "raxbhv9xwycl28ep","ong2tttua61e8vuq"
 ) or 
     die('Error connecting to MySQL server');
@@ -13,7 +13,7 @@ mysqli_connect("x40p5pp7n9rowyv6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "rd5
 
 //execute sql query
 $result=
-mysqli_query($stress-detect, "insert into register values('$email')");
+mysqli_query($connection, "insert into register values('$email')");
 
 //check query execution
 if (!$result)
