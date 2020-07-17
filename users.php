@@ -12,8 +12,10 @@ mysqli_connect("x40p5pp7n9rowyv6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "rd5
 
 
 //execute sql query
+$sql = "INSERT INTO users (email)
+VALUES ($user)";
 $result=
-mysqli_query($connection, "insert into users values('$user')");
+mysqli_query($connection, $sql);
 
 //check query execution
 if (!$result)
