@@ -15,8 +15,7 @@ if(isset($_POST)) {
     $email = $_POST['email'];
 
 //execute sql query
-$query = "INSERT INTO 'users' ('email')
-VALUES ('{$email}')";
+$query = "INSERT INTO 'users' ('email') VALUES ('{$email}')";
 $result=
 mysqli_query($connection, $query);
 
@@ -27,8 +26,7 @@ if (!$result)
 } 
 else {
         echo "Registration succesful!";
-
-
     }
+
 }
 ?>
