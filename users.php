@@ -16,17 +16,18 @@ if(isset($_POST)) {
 
 //execute sql query
 $query = "INSERT INTO 'users' ('email') VALUES ('$email')";
-$result=
-mysqli_query($connection, $query);
+
 
 //check query execution
-if (!$result)
-{
-    die ("Error in sql query");
+
+if (!mysqli_query($connection, $query)) {
+
+ die ("Error in sql query");
 } 
 else {
         echo "Registration succesful!" ;
     }
 
 }
+
 ?>
