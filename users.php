@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="assets/css/styler.css" type="text/css">
 
 <?php
-$user = $_POST['email'];
+$email = $_POST['email'];
 
 //checking connection
 $connection= 
@@ -11,11 +11,14 @@ mysqli_connect("x40p5pp7n9rowyv6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "rd5
     die('Error connecting to MySQL server');
 
 
+if(isset($_POST)) {
+    $email = $_POST['email'];
+
 //execute sql query
-$sql = "INSERT INTO users (email)
-VALUES ('$user')";
+$query = "INSERT INTO 'users' ('email')
+VALUES ('{$email}')";
 $result=
-mysqli_query($connection, $sql);
+mysqli_query($connection, $query);
 
 //check query execution
 if (!$result)
@@ -23,6 +26,9 @@ if (!$result)
     die ("Error in sql query");
 } 
 else {
-        echo ("Registration succesful!");
+        echo "Registration succesful!";
+
+
+    }
 }
 ?>

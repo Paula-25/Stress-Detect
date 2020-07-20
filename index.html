@@ -29,6 +29,11 @@
                 </h1>
             </div>
             <nav id="navbar">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
                 <ul>
                     <li class="current">
                         <a href="#performance">Features</a>
@@ -37,7 +42,7 @@
                         <a href="#middle">Pricing</a>
                     </li>
                     <li class="disabled">
-                        <a href="#vision">
+                        <a href="#features">
                             <button id="btn" type="submit">GET EARLY ACCESS
                             </button>
                         </a>
@@ -198,8 +203,8 @@
             <div class="centered">
         <h4 >Track your stress levels with just a scan</h4>
 
-        <form id="contact-form" class="centered" method="POST" action="register.php">
-            <input type="email" name="user" placeholder="Your Email" class="form-control" required>
+        <form id="contact-form" method="POST" action="users.php">
+            <input type="email" name="email" placeholder="Your Email" class="form-control" required>
             <input type="submit" class="btn-rounded" value="REGISTER">
         </form>
         <p>Copyright &copy; 2020 All rights reserved | Paul Studios</p>
@@ -211,6 +216,8 @@
 
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/jquery/jquery-3.5.1.min.js"></script>
+
 
 </body>
 
